@@ -8,15 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     //use HasFactory;
-     protected $table = 'cursos';
+     protected $table = 'posts';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'nombre',
-        'numero',
-        'fecha',
-        'multilenguaje',
-        'pago',
-        'descripcion',
-        'dificultad',
+        'tiulo',
+        'extracto',
+        'contenido',
+        'caducable',
+        'comentable',
+        "acceso",
+        "fecha",
+        "usuario"
     ];
 }
