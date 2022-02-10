@@ -12,9 +12,13 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    public function index($lang) {
+        App::setLocale($lang);
+
+        $posts = Post::all();
+        return view('Post.index', [
+           'posts' => $posts
+        ]);
     }
 
     /**
