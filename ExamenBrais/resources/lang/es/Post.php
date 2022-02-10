@@ -1,6 +1,9 @@
 <?php
 return [
     'titulo' => 'Titulo',
-    'fecha' => 'Fecha de publicación',
     'extracto' => 'Extracto de la publicación',
+    'caducable' => 'Caducable',
+    'comentable' => 'Comentable',
+    'acceso' => 'Acceso',
+    'fecha' => 'Fecha de publicación',
 ];
