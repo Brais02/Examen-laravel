@@ -27,10 +27,6 @@
                                     <td>{{ $post->titulo }}</td>
                                     <td>{{ $post->extracto }}</td>
                                     <td>{{ $post->fecha }}</td>
-
-                                    <td>
-                                        <a href="{{ url('/es/post' . $post->id) }}" title="View Student"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Prueb a</button></a>
-                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
