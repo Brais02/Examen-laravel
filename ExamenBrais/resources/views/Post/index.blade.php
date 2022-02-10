@@ -7,17 +7,17 @@
                 <div class="card-header">Posts</div>
                 <div class="card-body">
      
-                   
-                    <br/>
+                   <a href="{{ url('/es/post/create') }}" title="View Student"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>Crear Post</button></a>
+                  
                     <br/>
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Nombre</th>
+                                    <th>Titulo</th>
+                                    <th>Extracto</th>
                                     <th>Fecha</th>
-                                    <th>Dificultad</th>
                                 </tr>
                             </thead>
                             <tbody>

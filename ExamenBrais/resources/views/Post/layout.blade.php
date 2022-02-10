@@ -8,20 +8,20 @@
 
         <div class="container">
 
-            @if(last(request()->segments()) == "formulario")
-            <a href="{{ url('es/post/') }}">
+            @if(last(request()->segments()) == "post")
+            <a href="{{ url('/es/post/') }}">
                 @else
-                <a href=" {{url('es/post/'. last(request()->segments()) ) }}"> 
+                <a href=" {{url('/es/post/'. last(request()->segments()) ) }}"> 
                     @endif
                     <button class="btn btn-light btn-sm">@lang('espanol')</button></a>
 
-                @if(last(request()->segments()) == "formulario")
-                <a href="{{ url('en/post/') }}">
+                @if(last(request()->segments()) == "post")
+                <a href="{{ url('/en/post/') }}">
                     @else
-                    <a href=" {{url('en/post/'. last(request()->segments()) ) }}"> 
+                    <a href=" {{url('/en/post/'. last(request()->segments()) ) }}"> 
                         @endif
                         <button class="btn btn-light btn-sm">@lang('ingles')</button></a>
-                    <a href="{{ url('/') }}"><button class="btn btn-light btn-sm">Ir al Dashboard</button></a>
+                    <a href="{{ url('/dashboard') }}"><button class="btn btn-light btn-sm">Ir al Dashboard</button></a>
                     @yield('content')
         </div>
 

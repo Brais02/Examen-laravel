@@ -11,16 +11,16 @@
 
     <div class="container">
         <div class="card">
-            <div class="card-header">Creando nuevo Post </div>
+            <div class="card-header">@lang('CrearPub') </div>
             <div class="card-body">
                 <form action="{{ url('/es/post') }}" method="post">
                     {!! csrf_field() !!}
 
-                    <label for="nombre">Titulo</label>
+                    <label for="nombre">@lang('Post.titulo')</label>
                     <input type="text" id="titulo" name="titulo" class="form-control" required value="{{ old('titulo', $post->titulo ?? '') }}"><br>
                     {{$errors->first('titulo')}}
 
-                     <label for="nombre">extracto</label>
+                     <label for="nombre">@lang('Post.extracto')</label>
                     <input type="text" id="extracto" name="extracto" class="form-control" required value="{{ old('extracto', $post->extracto ?? '') }}"><br>
                     {{$errors->first('extracto')}}
                     
@@ -43,10 +43,10 @@
                         <small class="text-danger">{{$errors->first('acceso')}}</small>
                     </div>
 
-                    <label for="fecha">Fecha de publicación:</label>
+                    <label for="fecha">@lang('Post.fecha'):</label>
                     <input type="date" id="fecha" name="fecha" class="form-control" required value="{{ old('fecha', $post->fecha ?? '') }}"><br>
 
-                    <input hidden type="number" value="{{ $user->usuario }}">
+                   <!-- <input hidden type="number" name="usuario" value="">-->
                     
                     <button type="submit" class="btn btn-success" value="Save">Enviar</button>
                 </form>

@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\PostRequest;
+use App\Http\Requests\PostRquest;
 use App\Models\Post;
+use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -32,9 +33,11 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($lang)
     {
-        //
+        App::setLocale($lang);
+        
+        return view('Post.crear');
     }
 
     /**
@@ -43,7 +46,7 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(PostRequest $request)
+    public function store(PostRquest $request)
     {
          Post::create($request->all());
         return redirect(RouteServiceProvider::HOME);

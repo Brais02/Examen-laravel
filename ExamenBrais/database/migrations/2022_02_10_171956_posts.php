@@ -23,7 +23,7 @@ class Posts extends Migration
             $table->enum('acceso', ['privado', 'publico']); //Select
             $table->date('fecha');
             
-            $table->integer('usuario');
+            //$table->integer('usuario');
             $table->timestamps();
         });
     }

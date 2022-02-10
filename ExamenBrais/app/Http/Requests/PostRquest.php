@@ -31,7 +31,7 @@ class PostRquest extends FormRequest
             'comentable' => 'nullable',
             'acceso' => 'required',
             'fecha' => 'required',
-            'usuario' => 'required'
+            //'usuario' => 'required'
         ];
         
     }

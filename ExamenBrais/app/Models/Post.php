@@ -11,13 +11,13 @@ class Post extends Model
      protected $table = 'posts';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'tiulo',
+        'titulo',
         'extracto',
         'contenido',
         'caducable',
         'comentable',
         "acceso",
         "fecha",
-        "usuario"
+        //"usuario"
     ];
 }
